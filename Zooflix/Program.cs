@@ -3,7 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Zooflix.Data;
 
 
-//using FirstClassWebCentric.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<ZooflixContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("ZooflixContext") ?? throw new InvalidOperationException("Connection string 'ZooflixContext' not found.")));
